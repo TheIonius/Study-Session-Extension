@@ -4,19 +4,26 @@ A Chrome extension for focused study sessions with website blocking and Pomodoro
 
 ## Preview
 
-### Extension Popup
-#### Light Theme
-![Extension Popup Light](assets/Screenshot1.png)
-
-#### Dark Theme
-![Extension Popup Dark](assets/screenshot1dark.png)
-
-### Blocked Page
-#### Light Theme
-![Blocked Page Light](assets/Screenshot2.png)
-
-#### Dark Theme
-![Blocked Page Dark](assets/screenshot2dark.png)
+<div align="center">
+<table>
+  <tr>
+    <td align="center"><strong>Extension Popup (Light)</strong></td>
+    <td align="center"><strong>Extension Popup (Dark)</strong></td>
+  </tr>
+  <tr>
+    <td><img src="assets/Screenshot1.png" width="400"/></td>
+    <td><img src="assets/Screenshot1dark.png" width="400"/></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Blocked Page (Light)</strong></td>
+    <td align="center"><strong>Blocked Page (Dark)</strong></td>
+  </tr>
+  <tr>
+    <td><img src="assets/Screenshot2.png" width="400"/></td>
+    <td><img src="assets/Screenshot2dark.png" width="400"/></td>
+  </tr>
+</table>
+</div>
 
 ## Technical Details
 
