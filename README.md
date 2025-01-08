@@ -1,3 +1,23 @@
+# Study Session Extension
+
+A Chrome extension for focused study sessions with website blocking and Pomodoro timer.
+
+## Preview
+
+### Extension Popup
+#### Light Theme
+![Extension Popup Light](assets/Screenshot1.png)
+
+#### Dark Theme
+![Extension Popup Dark](assets/screenshot1dark.png)
+
+### Blocked Page
+#### Light Theme
+![Blocked Page Light](assets/Screenshot2.png)
+
+#### Dark Theme
+![Blocked Page Dark](assets/screenshot2dark.png)
+
 ## Technical Details
 
 - Built with vanilla JavaScript
