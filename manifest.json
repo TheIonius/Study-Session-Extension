@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Study Session",
+  "version": "1.0",
+  "description": "A simple Pomodoro timer with website blocking",
+  "icons": {
+    "48": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "storage",
+    "notifications",
+    "webNavigation",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "scripts/background.js"
+  }
+} 

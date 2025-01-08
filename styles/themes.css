@@ -1,0 +1,23 @@
+:root[data-theme="light"] {
+  --bg-color: #f8fafc;
+  --text-color: #1e293b;
+  --accent-color: #3b82f6;
+  --button-bg: #4ade80;
+  --button-hover: #22c55e;
+  --input-bg: #ffffff;
+  --input-border: #e2e8f0;
+  --card-bg: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+:root[data-theme="dark"] {
+  --bg-color: #0f172a;
+  --text-color: #f1f5f9;
+  --accent-color: #60a5fa;
+  --button-bg: #22c55e;
+  --button-hover: #16a34a;
+  --input-bg: #1e293b;
+  --input-border: #334155;
+  --card-bg: #1e293b;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+} 

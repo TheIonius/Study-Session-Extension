@@ -1,0 +1,66 @@
+.container {
+  width: 300px;
+  padding: 15px;
+}
+
+.timer-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#timer {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.website-blocker {
+  margin: 20px 0;
+}
+
+#websiteInput {
+  width: 70%;
+  padding: 8px;
+  margin-right: 5px;
+}
+
+#blockedWebsites {
+  list-style-type: none;
+  padding: 0;
+}
+
+.quote-container {
+  margin-top: 20px;
+  font-style: italic;
+  color: #666;
+}
+
+.error-message {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 4px;
+  display: none;
+  text-align: center;
+}
+
+/* For dark theme support */
+[data-theme="dark"] .error-message {
+  background-color: #7f1d1d;
+  color: #fecaca;
+} 
