@@ -99,7 +99,13 @@ Feel free to fork this project and submit pull requests for any improvements.
 ## Installation
 
 1. Clone this repository or download the ZIP file
-2. Open Chrome and navigate to `chrome://extensions/`
+```bash
+git clone https://github.com/TheIonius/Study-Session-Extension.git
+```
+2. Open Chrome and navigate to
+```javascript
+ `chrome://extensions/`
+ ```
 3. Enable "Developer mode" in the top right
 4. Click "Load unpacked" and select the extension directory
 
@@ -109,3 +115,5 @@ Feel free to fork this project and submit pull requests for any improvements.
 2. Set your blocked websites
 3. Start a 25-minute study session
 4. The extension will block distracting sites until the timer ends 
+
+Questions, Comments? I would love to hear your feedback <3 🐾 
