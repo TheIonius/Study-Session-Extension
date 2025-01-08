@@ -34,17 +34,23 @@ document.addEventListener('DOMContentLoaded', () => {
       chrome.runtime.sendMessage('START_TIMER');
       startButton.textContent = 'Pause';
       disableDeleteButtons();
+      updateTimerDisplay(timeLeft);
     } else {
-      chrome.runtime.sendMessage('RESET_TIMER');
+      chrome.runtime.sendMessage('PAUSE_TIMER');
       startButton.textContent = 'Start';
       enableDeleteButtons();
+      updateTimerDisplay(timeLeft);
     }
   }
 
   function resetTimer() {
-    timeLeft = 25 * 60;
-    updateTimerDisplay(timeLeft);
     chrome.runtime.sendMessage('RESET_TIMER');
+    chrome.runtime.sendMessage('GET_TIMER_STATE', (response) => {
+      if (response) {
+        timeLeft = response.timeLeft;
+        updateTimerDisplay(timeLeft);
+      }
+    });
   }
 
   async function addWebsite() {
@@ -89,6 +95,53 @@ document.addEventListener('DOMContentLoaded', () => {
     updateBlockedWebsitesList();
   }
 
+  function makeTimerEditable() {
+    const timerDisplay = document.getElementById('timer');
+    
+    if (!timerDisplay.parentElement.classList.contains('timer-container')) {
+        const container = document.createElement('div');
+        container.className = 'timer-container';
+        timerDisplay.parentNode.insertBefore(container, timerDisplay);
+        container.appendChild(timerDisplay);
+    }
+    
+    const editIcon = document.createElement('span');
+    editIcon.innerHTML = '✎';
+    editIcon.className = 'edit-icon';
+    timerDisplay.parentNode.appendChild(editIcon);
+
+    editIcon.addEventListener('click', () => {
+      const currentTime = timerDisplay.textContent;
+      const minutes = parseInt(currentTime.split(':')[0]);
+      
+      const input = document.createElement('input');
+      input.type = 'number';
+      input.value = minutes;
+      input.min = 1;
+      input.max = 120;
+      input.className = 'timer-input';
+      
+      timerDisplay.style.display = 'none';
+      editIcon.style.display = 'none';
+      timerDisplay.parentNode.insertBefore(input, timerDisplay);
+      input.focus();
+
+      input.addEventListener('blur', () => {
+        const newMinutes = Math.min(Math.max(parseInt(input.value) || 25, 1), 120);
+        chrome.runtime.sendMessage({ type: 'SET_TIMER', minutes: newMinutes });
+        timerDisplay.style.display = 'block';
+        editIcon.style.display = 'inline';
+        input.remove();
+      });
+
+      input.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          input.blur();
+        }
+      });
+    });
+  }
+
   startButton.addEventListener('click', startTimer);
   resetButton.addEventListener('click', resetTimer);
   addWebsiteButton.addEventListener('click', addWebsite);
@@ -112,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateTimerDisplay(timeLeft);
       }
     });
-  }, 1000);
+  }, 100);
 
   chrome.runtime.sendMessage('GET_TIMER_STATE', (response) => {
     if (response) {
@@ -124,4 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
       updateTimerDisplay(timeLeft);
     }
   });
+
+  makeTimerEditable();
 });
