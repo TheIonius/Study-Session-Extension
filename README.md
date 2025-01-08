@@ -7,20 +7,16 @@ A Chrome extension for focused study sessions with website blocking and Pomodoro
 <div align="center">
 <table>
   <tr>
-    <td align="center"><strong>Extension Popup (Light)</strong></td>
-    <td align="center"><strong>Extension Popup (Dark)</strong></td>
+    <td align="center"><strong>Extension (Light)</strong></td>
+    <td align="center"><strong>Extension (Dark)</strong></td>
+    <td align="center"><strong>Blocked (Light)</strong></td>
+    <td align="center"><strong>Blocked (Dark)</strong></td>
   </tr>
   <tr>
-    <td><img src="assets/Screenshot1.png" width="400"/></td>
-    <td><img src="assets/Screenshot1dark.png" width="400"/></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>Blocked Page (Light)</strong></td>
-    <td align="center"><strong>Blocked Page (Dark)</strong></td>
-  </tr>
-  <tr>
-    <td><img src="assets/Screenshot2.png" width="400"/></td>
-    <td><img src="assets/Screenshot2dark.png" width="400"/></td>
+    <td><img src="assets/Screenshot1.png" width="200"/></td>
+    <td><img src="assets/Screenshot1dark.png" width="200"/></td>
+    <td><img src="assets/Screenshot2.png" width="200"/></td>
+    <td><img src="assets/Screenshot2dark.png" width="200"/></td>
   </tr>
 </table>
 </div>
